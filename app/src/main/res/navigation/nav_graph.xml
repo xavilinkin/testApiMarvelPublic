@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listMarvelFragment">
+
+    <fragment
+        android:id="@+id/listMarvelFragment"
+        android:name="com.example.mymarvelapp.ui.view.fragments.ListMarvelFragment"
+        android:label="fragment_list_marvel"
+        tools:layout="@layout/fragment_list_marvel" >
+        <action
+            android:id="@+id/action_listMarvelFragment_to_detailMarvelFragment"
+            app:destination="@id/detailMarvelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMarvelFragment"
+        android:name="com.example.mymarvelapp.ui.view.fragments.DetailMarvelFragment"
+        android:label="fragment_detail_marvel"
+        tools:layout="@layout/fragment_detail_marvel" >
+        <argument
+            android:name="id_marvel"
+            app:argType="string"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
